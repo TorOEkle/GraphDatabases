@@ -7,3 +7,15 @@ podman run -p 127.0.0.1:7200:7200 --name graphdb-instance-name -t ontotext/graph
 ```
 
 Now is GraphDB available at <http://localhost:7200/>
+
+
+To run refine run one of either commands
+```bash
+docker-compose up -d
+
+podman run -d -p 7333:7333 --name refine ontotext/refine:latest
+```
+
+Then refine is available at <http://localhost:7333>
+
+

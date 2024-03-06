@@ -18,4 +18,10 @@ podman run -d -p 7333:7333 --name refine ontotext/refine:latest
 
 Then refine is available at <http://localhost:7333>
 
+When finish working you can stop it by running 
+
+```bash
+podman stop refine
+```
+
 

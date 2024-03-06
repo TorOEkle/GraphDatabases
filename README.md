@@ -1,13 +1,9 @@
-# Neo4j
-This branch is for demo and learning neo4j.
-
-To spin up a container with graph data science library run following command. 
+# GraphDB
+This branch is for demo and learning GraphDB. Look at other branches for Neo4j, RDFox and SQL.
+To spin up a container with GraphDB run following command.
 
 ```bash
-podman run -it --rm `
-  --publish=7474:7474 --publish=7687:7687 `
-  --user="$(id -u):$(id -g)" `
-  -e NEO4J_AUTH=none `
-  --env NEO4J_PLUGINS='["graph-data-science"]' `
-  neo4j:latest
+podman run -p 127.0.0.1:7200:7200 --name graphdb-instance-name -t ontotext/graphdb:10.6.1
 ```
+
+Now is GraphDB available at <http://localhost:7200/>
